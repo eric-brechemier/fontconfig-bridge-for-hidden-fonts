@@ -26,13 +26,16 @@ rm *."$fontServiceName".otf 2>/dev/null
 
 for file in "$fontServiceCache"/.*
 do
-  # extract file name without extension
-  name="$(basename "$file" '.otf')"
-  # remove initial '.', add custom extension
-  name="${name#.}."$fontServiceName".otf"
-  # create link
-  echo "$name -> $file"
-  ln "$file" "$name"
+  if test -f "$file"
+  then
+    # extract file name without extension
+    name="$(basename "$file" '.otf')"
+    # remove initial '.', add custom extension
+    name="${name#.}."$fontServiceName".otf"
+    # create link
+    echo "$name -> $file"
+    ln "$file" "$name"
+  fi
 done
 
 echo 'Refresh font cache'

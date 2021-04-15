@@ -12,8 +12,8 @@ $ ./help-fontconfig-discover-hidden-fonts-for.sh [name] [cache]
 
 The script takes two parameters:
 
-* ***name***: used to create a distinct folder for each font service
-* ***cache***: location of the parent folder of hidden fonts
+* ***name***: string, used to create a distinct folder for each font service
+* ***cache***: path, location of the parent folder of hidden fonts
 
 For each hidden font in the hidden cache folder of the subscription service,
 the script creates a symbolic links in a location known to Fontconfig,

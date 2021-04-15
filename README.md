@@ -79,4 +79,6 @@ Eric Bréchemier
 
 ## License
 
-[CC0](https://creativecommons.org/share-your-work/public-domain/cc0/)
+[Creative Commons CC0 “No Rights Reserved”][CC0]
+
+[CC0]: https://creativecommons.org/share-your-work/public-domain/cc0/

@@ -29,7 +29,7 @@ cd "$linksFolder" || exit 3
 pwd
 
 echo 'Add symbolic links for current fonts...'
-for filePath in "$fontServiceCache"/.*.otf
+for filePath in "$fontServiceCache"/.*
 do
   if test -f "$filePath"
   then

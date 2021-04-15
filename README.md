@@ -26,7 +26,7 @@ call the script after each change in your font subscriptions as:
 
 ```
 $ ./help-fontconfig-discover-hidden-fonts-for.sh fontitious \
-              ~/Library/Application Support/Fontitious/.fonts
+              ~/Library/Application\ Support/Fontitious/.fonts
 ```
 
 I am using this script on macOS Catalina the hidden fonts

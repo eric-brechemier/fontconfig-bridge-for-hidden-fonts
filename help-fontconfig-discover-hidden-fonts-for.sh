@@ -31,13 +31,16 @@ pwd
 echo 'Add symbolic links for current fonts...'
 for filePath in "$fontServiceCache"/.*.otf
 do
-  # extract file name
-  fileName="$(basename "$filePath")"
-  # remove initial '.'
-  linkName="${fileName#.}"
-  # create symbolic link
-  echo "$fileName -> $linkName"
-  ln -s "$filePath" "$linkName"
+  if test -f "$filePath"
+  then
+    # extract file name
+    fileName="$(basename "$filePath")"
+    # remove initial '.'
+    linkName="${fileName#.}"
+    # create symbolic link
+    echo "$fileName -> $linkName"
+    ln -s "$filePath" "$linkName"
+  fi
 done
 
 echo 'Refresh font cache...'

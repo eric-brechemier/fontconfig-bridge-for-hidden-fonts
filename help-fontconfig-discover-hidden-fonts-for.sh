@@ -38,7 +38,7 @@ do
     # remove initial '.'
     linkName="${fileName#.}"
     # create symbolic link
-    echo "$fileName -> $linkName"
+    echo "$linkName -> $fileName"
     ln -s "$filePath" "$linkName"
   fi
 done

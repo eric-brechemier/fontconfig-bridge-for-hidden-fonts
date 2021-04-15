@@ -40,7 +40,8 @@ do
   ln -s "$filePath" "$linkName"
 done
 
-echo 'Refresh font cache'
-fc-cache -v || exit 3
+echo 'Refresh font cache...'
+fc-cache -v 2>&1 | grep "$linksFolder" | head -n 1
+fc-list 2>&1 | grep "$linksFolder"
 
 echo 'Done.'

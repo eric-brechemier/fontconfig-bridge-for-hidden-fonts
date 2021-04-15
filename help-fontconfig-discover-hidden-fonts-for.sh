@@ -17,7 +17,8 @@ fi
 echo 'Help Fontconfig to discover hidden fonts'
 
 echo 'Create Fontconfig folder if missing'
-fontconfigFolder="$HOME/.fonts"
+xdgFolder="${XDG_DATA_HOME:-$HOME/.local/share}"
+fontconfigFolder="$xdgFolder/fonts"
 mkdir -p "$fontconfigFolder" || exit 1
 cd "$fontconfigFolder" || exit 2
 

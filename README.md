@@ -21,7 +21,7 @@ in a subfolder with the given service name.
 
 For example, if you are subscribed to a fictitious font subscription service
 called fontitious which stores its fonts locally as hidden font files in the
-folder ~/Library/Application Support/Fontitious/A/B/C/.f/, you would need to
+folder ~/Library/Application Support/Fontitious/.fonts/, you would need to
 call the script after each change in your font subscriptions as:
 
 ```

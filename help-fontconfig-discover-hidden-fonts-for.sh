@@ -32,9 +32,9 @@ do
     name="$(basename "$file" '.otf')"
     # remove initial '.', add custom extension
     name="${name#.}."$fontServiceName".otf"
-    # create link
+    # create symbolic link
     echo "$name -> $file"
-    ln "$file" "$name"
+    ln -s "$file" "$name"
   fi
 done
 

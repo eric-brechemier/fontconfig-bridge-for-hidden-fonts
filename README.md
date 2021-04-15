@@ -59,7 +59,7 @@ The source code explicitly filters out any file name starting with a `.`:
 	}
     }
 ```
-— [fontconfig/src/fcdir.c, 256–266](https://gitlab.freedesktop.org/fontconfig/fontconfig/-/blob/fd3eebad741c0fdfce2a7e44f9b3ac8895b70a58/src/fcdir.c#L258)
+— [fontconfig/src/fcdir.c, lines 256–266](https://gitlab.freedesktop.org/fontconfig/fontconfig/-/blob/fd3eebad741c0fdfce2a7e44f9b3ac8895b70a58/src/fcdir.c#L258)
 
 This project offers a simple workaround by creating symbolic links for hidden
 font files in a subfolder of one of the local folders configured in Fontconfig.

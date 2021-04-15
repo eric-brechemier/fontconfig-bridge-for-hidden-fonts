@@ -66,10 +66,10 @@ font files in a subfolder of one of the local folders configured in Fontconfig.
 
 ## References
 
-* [1] [Fontconfig][]
-* [2] [man fonts-conf](https://www.freedesktop.org/software/fontconfig/fontconfig-user.html)
-* [3] [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
-* [4] [Fontconfig source repository](https://gitlab.freedesktop.org/fontconfig/fontconfig)
+1. [Fontconfig][]
+2. [man fonts-conf](https://www.freedesktop.org/software/fontconfig/fontconfig-user.html)
+3. [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
+4. [Fontconfig source repository](https://gitlab.freedesktop.org/fontconfig/fontconfig)
 
 [Fontconfig]: https://www.freedesktop.org/wiki/Software/fontconfig/
 

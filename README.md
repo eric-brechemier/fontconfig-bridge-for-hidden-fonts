@@ -29,9 +29,18 @@ $ ./help-fontconfig-discover-hidden-fonts-for.sh fontitious \
               ~/Library/Application\ Support/Fontitious/.fonts
 ```
 
-I am using this script on macOS Catalina; the hidden fonts
-get listed successfully in Gimp, Krita, Inkscape and Scribus
+I am using this script on macOS Catalina with fontconfig
+installed using Homebrew/MacPorts; the hidden fonts get
+listed successfully in Gimp, Krita, Inkscape and Scribus
 after running the script and restarting each app.
+
+Inkscape 1.x ships its own version of fontconfig, with a restricted
+configuration which requires a bit more work: if the folder
+`~/Library/Application\ Support/org.inkscape.Inkscape` is found,
+an extra configuration file, `00-load-xdg-fonts.conf` is created
+in `org.inkscape.Inkscape/config/fontconfig/conf.d/` by the script,
+to allow loading fonts from the location `~/.local/share/fonts`
+which is shared out of the box with Gimp, Krita and Scribus.
 
 ## Rationale
 
@@ -70,6 +79,7 @@ font files in a subfolder of one of the local folders configured in Fontconfig.
 2. [man fonts-conf](https://www.freedesktop.org/software/fontconfig/fontconfig-user.html)
 3. [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
 4. [Fontconfig source repository](https://gitlab.freedesktop.org/fontconfig/fontconfig)
+5. [fontconfig fonts.conf config in Inkscape](https://gitlab.com/inkscape/inkscape/-/blob/master/packaging/macos/fonts.conf)
 
 [Fontconfig]: https://www.freedesktop.org/wiki/Software/fontconfig/
 

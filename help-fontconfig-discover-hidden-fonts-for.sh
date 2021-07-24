@@ -5,6 +5,8 @@
 #   * name: string, used to create a distinct folder for each font service
 #   * cache: path, location of the parent folder of hidden fonts
 #
+cd "$(dirname "$0")"
+
 fontServiceName="$1"
 fontServiceCache="$2"
 
@@ -20,12 +22,19 @@ xdgFolder="${XDG_DATA_HOME:-$HOME/.local/share}"
 fontconfigFolder="$xdgFolder/fonts"
 linksFolder="$fontconfigFolder/$fontServiceName"
 
+inkscapeConfig="$HOME/Library/Application Support/org.inkscape.Inkscape/config"
+if test -d "$inkscapeConfig"
+then
+  echo 'Add config to load fonts from shared XDG directory in Inkscape...'
+  cp -R inkscape/fontconfig "$inkscapeConfig" || exit 2
+fi
+
 echo 'Remove existing links folder...'
-rm -rf "$linksFolder" || exit 1
+rm -rf "$linksFolder" || exit 3
 
 echo 'Create new symbolic links folder...'
-mkdir -p "$linksFolder" || exit 2
-cd "$linksFolder" || exit 3
+mkdir -p "$linksFolder" || exit 4
+cd "$linksFolder" || exit 5
 pwd
 
 echo 'Add symbolic links for current fonts...'

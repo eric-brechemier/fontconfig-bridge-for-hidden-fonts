@@ -23,10 +23,24 @@ fontconfigFolder="$xdgFolder/fonts"
 linksFolder="$fontconfigFolder/$fontServiceName"
 
 inkscapeConfig="$HOME/Library/Application Support/org.inkscape.Inkscape/config"
+inkscapeFontconfigConfFolder="$inkscapeConfig/fontconfig/conf.d"
+inkscapeXdgFontsConf="$inkscapeFontconfigConfFolder/00-load-xdg-fonts.conf"
 if test -d "$inkscapeConfig"
 then
   echo 'Add config to load fonts from shared XDG directory in Inkscape...'
-  cp -R inkscape/fontconfig "$inkscapeConfig" || exit 2
+  mkdir -p "$inkscapeFontconfigConfFolder" || exit 2
+  cat << END > "$inkscapeXdgFontsConf"
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<!--
+  Config created by running $0
+  from https://github.com/eric-brechemier/fontconfig-bridge-for-hidden-fonts
+-->
+<fontconfig>
+  <!-- Load fonts located in local XDG fonts directory -->
+  <dir>$fontconfigFolder</dir>
+</fontconfig>
+END
 fi
 
 echo 'Remove existing links folder...'

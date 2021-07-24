@@ -39,8 +39,8 @@ configuration which requires a bit more work: if the folder
 `~/Library/Application\ Support/org.inkscape.Inkscape` is found,
 an extra configuration file, `00-load-xdg-fonts.conf` is created
 in `org.inkscape.Inkscape/config/fontconfig/conf.d/` by the script,
-to allow loading fonts from the location `~/.local/share/fonts`
-which is shared out of the box with Gimp, Krita and Scribus.
+to allow loading fonts from the same local location which is
+shared out of the box with Gimp, Krita and Scribus.
 
 ## Rationale
 

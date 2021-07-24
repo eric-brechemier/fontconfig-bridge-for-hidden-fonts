@@ -79,7 +79,7 @@ font files in a subfolder of one of the local folders configured in Fontconfig.
 2. [man fonts-conf](https://www.freedesktop.org/software/fontconfig/fontconfig-user.html)
 3. [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
 4. [Fontconfig source repository](https://gitlab.freedesktop.org/fontconfig/fontconfig)
-5. [Restrictive fonts.conf config in Inkscape](https://gitlab.com/inkscape/inkscape/-/blob/master/packaging/macos/fonts.conf)
+5. [Restrictive fonts.conf config in Inkscape](https://gitlab.com/inkscape/inkscape/-/blob/a5c832e3/packaging/macos/fonts.conf)
 
 [Fontconfig]: https://www.freedesktop.org/wiki/Software/fontconfig/
 

@@ -66,8 +66,11 @@ do
   fi
 done
 
-echo 'Refresh font cache...'
-fc-cache -v 2>&1 | grep "$linksFolder" | head -n 1
-fc-list 2>&1 | grep "$linksFolder"
+if command -v fc-cache
+then
+  echo 'Refresh font cache...'
+  fc-cache -v 2>&1 | grep "$linksFolder" | head -n 1
+  fc-list 2>&1 | grep "$linksFolder"
+fi
 
 echo 'Done.'

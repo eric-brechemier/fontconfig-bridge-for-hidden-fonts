@@ -29,9 +29,8 @@ $ ./help-fontconfig-discover-hidden-fonts-for.sh fontitious \
               ~/Library/Application\ Support/Fontitious/.fonts
 ```
 
-I am using this script on macOS Catalina with fontconfig
-installed using Homebrew/MacPorts; the hidden fonts get
-listed successfully in Gimp, Krita, Inkscape and Scribus
+I am using this script on macOS Catalina; the hidden fonts
+get listed successfully in Gimp, Krita, Inkscape and Scribus
 after running the script and restarting each app.
 
 Inkscape 1.x ships its own version of fontconfig, with a restricted

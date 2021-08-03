@@ -16,7 +16,7 @@ then
   exit 1
 fi
 
-echo 'Help Fontconfig to discover hidden fonts'
+echo "Help Fontconfig to discover hidden fonts for $fontServiceName"
 
 xdgFolder="${XDG_DATA_HOME:-$HOME/.local/share}"
 fontconfigFolder="$xdgFolder/fonts"
